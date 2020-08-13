@@ -1,0 +1,5 @@
+risky: false
+
+version: 7
+
+preset: laravel

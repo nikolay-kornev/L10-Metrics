@@ -8,9 +8,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class StyleTestCommand extends Command
 {
-    private const TEST_CONST_ONE           = 'test constant';
+    private const TEST_CONST_ONE = 'test constant';
     private const TEST_CONST_TWO           = 1000;
-    private const TEST_CONST_THREE         = true;
+    private const TEST_CONST_THREE                    = true;
     const TEST_CONST_FOUR                  = [1, 2, 3, 4, 5];
 
     protected static $defaultName = 'app:test-styles';
@@ -20,7 +20,7 @@ class StyleTestCommand extends Command
         $this
             ->setDescription('Dummy code to test code style automation')
             ->setHelp('This command is used to test code style automation tool (StyleCI).')
-        ;
+        ;;;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -29,7 +29,7 @@ class StyleTestCommand extends Command
         $aaa = 2;
 
         if ($this->PrintVars($a, $aaa)) {
-            echo 'printed';
+            echo        'printed';
             echo "\n";
         }
 
@@ -39,7 +39,7 @@ class StyleTestCommand extends Command
     public function PrintVars($a, $b)
     {
         echo $a . PHP_EOL;
-        echo $b . PHP_EOL;
+        echo $b.PHP_EOL;
 
         return true;
     }

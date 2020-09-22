@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class StyleTestCommand extends Command
 {
     private const TEST_CONST_ONE           = 'test constant';
-    private const TEST_CONST_TWO  = 1000;
+    private const TEST_CONST_TWO           = 1000;
     private const TEST_CONST_THREE         = true;
     const TEST_CONST_FOUR                  = [1, 2, 3, 4, 5];
 
@@ -28,10 +28,9 @@ class StyleTestCommand extends Command
         $a   = 1;
         $aaa = 2;
 
-        if ($this->PrintVars($a, $aaa  ))
-        {
+        if ($this->PrintVars($a, $aaa)) {
             echo 'printed';
-            echo "\n";;;;
+            echo "\n";
         }
 
         return 0;

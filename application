@@ -11,6 +11,7 @@ $application = new Application();
 
 // ... register commands
 $application->add(new CalculateMetricCommand());
+$application->add(new \App\Command\StyleTestCommand());
 
 try {
     $application->run();

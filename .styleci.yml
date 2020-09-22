@@ -3,3 +3,15 @@ risky: false
 version: 7
 
 preset: laravel
+
+disabled:
+  - unalign_equals
+  - concat_without_spaces
+  - no_multiline_whitespace_before_semicolons
+  - not_operator_with_successor_space
+
+enabled:
+  - align_equals
+  - align_double_arrow
+  - concat_with_spaces
+  - newline_before_semicolons_chained

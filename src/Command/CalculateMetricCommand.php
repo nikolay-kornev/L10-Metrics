@@ -42,7 +42,6 @@ class CalculateMetricCommand extends Command
         $sumOfTimeLogged       = 0;
         $sumOfEstimates        = 0;
         while (($row = fgetcsv($handle)) !== false) {
-
             if ($rowCount === 0) {
                 foreach ($row as $index => $cell) {
                     if ($cell === self::COLUMN_LOGGED) {
@@ -78,11 +77,11 @@ class CalculateMetricCommand extends Command
 
                     if (!empty($cell) && in_array($index, $columnsWithTimeLogged, true)) {
                         [, , , $time] = explode(';', $cell);
-                        $sumOfTimeLogged += (int)$time;
+                        $sumOfTimeLogged += (int) $time;
                     }
 
                     if ($index === $columnWithEstimate) {
-                        $sumOfEstimates += (int)$cell;
+                        $sumOfEstimates += (int) $cell;
                     }
 
                     if ($index === $columnWithWorkRatio && strlen($cell) > 4) {
@@ -94,7 +93,7 @@ class CalculateMetricCommand extends Command
             $rowCount++;
         }
 
-        $output->writeln('TOTAL ISSUES:   ' . ($rowCount-1));
+        $output->writeln('TOTAL ISSUES:   ' . ($rowCount - 1));
         $output->writeln('TOTAL ESTIMATE: ' . $sumOfEstimates);
         $output->writeln('TOTAL LOGGED:   ' . $sumOfTimeLogged);
 

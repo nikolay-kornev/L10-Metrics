@@ -30,7 +30,7 @@ class StyleTestCommand extends Command{
         {
             print('printed');
             echo "\n";
-        };;
+        };;;
 
         return 0;
     }
